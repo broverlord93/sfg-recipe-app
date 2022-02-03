@@ -17,8 +17,9 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
-    // TODO: Add
-    //private Difficulty difficulty;
+
+    @Enumerated(value= EnumType.STRING)
+    private Difficulty difficulty;
 
     @Lob // Large object - binary BLOB
     private Byte[] image;
@@ -93,6 +94,14 @@ public class Recipe {
         this.directions = directions;
     }
 
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
+
     public Byte[] getImage() {
         return image;
     }
@@ -107,5 +116,13 @@ public class Recipe {
 
     public void setNotes(Notes notes) {
         this.notes = notes;
+    }
+
+    public Set<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(Set<Ingredient> ingredients) {
+        this.ingredients = ingredients;
     }
 }
