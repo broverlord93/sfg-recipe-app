@@ -19,9 +19,6 @@ public class Ingredient {
     @ManyToOne
     private Recipe recipe;
 
-    public Ingredient(String ancho_chili_powder, BigDecimal bigDecimal, UnitOfMeasure tableSpoonUom, Recipe tacosRecipe) {
-    }
-
     public Ingredient(String description, BigDecimal amount, UnitOfMeasure unit) {
         this.description = description;
         this.amount = amount;
